@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden
+}
+
+body {
+    background-color: rgb(134, 167, 255);
+    color: #eee;
+    font-family: sans-serif, Arial;
+    min-height: 100vh;
+}
+
+
+main {
+    flex-grow: 1;
+}
+
+#calculator {
+    background-color: rgb(19, 25, 41);
+    border-radius: 12px;
+    box-shadow: 7px 7px 8px rgba(19, 25, 41, 0.35);
+    margin: 15vh auto;
+    height: 460px;
+    width: 410px;
+    padding: 10px;
+}
