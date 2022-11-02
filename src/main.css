@@ -17,17 +17,139 @@ body {
     min-height: 100vh;
 }
 
-
 main {
     flex-grow: 1;
 }
 
 #calculator {
     background-color: rgb(19, 25, 41);
+    border: solid rgb(11, 14, 24) 1px;
     border-radius: 12px;
     box-shadow: 7px 7px 8px rgba(19, 25, 41, 0.35);
     margin: 15vh auto;
-    height: 460px;
-    width: 410px;
-    padding: 10px;
+    height: 440px;
+    width: 500px;
+    padding: 15px;
+}
+
+.display-box {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #dcdbe1;
+    border: solid rgb(9, 12, 20) 1px;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    line-height: 3em;
+}
+
+
+.display-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4%;
+    line-height: 3em;
+}
+
+#result {
+    font-size: 2.6em;
+    padding: 1%;
+}
+
+
+.buttons {
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4%;
+    row-gap: 4%;
+    line-height: 4em;
+}
+
+#btn1 {
+    background-color: #d1b40e;
+    border: solid #b38900 1.2px;
+}
+
+#btn1:hover {
+    background-color: #f3bb02;
+}
+
+#btn2 {
+    background-color: #da790b;
+    border: solid #b38900 1.2px;
+}
+
+#btn2:hover {
+    background-color: #f58c03;
+}
+
+#btn3 {
+    background-color: rgb(204, 56, 11);
+    border: solid rgb(163, 43, 6) 1.2px;
+}
+
+#btn3:hover {
+    background-color: rgb(235, 61, 8);
+}
+
+
+.group1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2%;
+}
+
+.group1>div>input:hover {
+    background-color: #01c258;
+}
+
+.group2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4%;
+}
+
+.group2>div>input {
+    background-color: #1cadda;
+}
+
+.group2>div>input:hover {
+    background-color: #13d1f3;
+}
+
+
+.group3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    line-height: 4em;
+    margin-top: 1.5%;
+}
+
+
+input[type=button] {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #009c46;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    outline: none;
+    font-size: 1.7em;
+}
+
+.buttons input {
+    height: 90%;
+    border: solid #00421e 1.2px;
+}
+
+
+input[type=button]:hover {
+    cursor: pointer;
+}
+
+@media(max-width: 540px) {
+    #calculator {
+        width: 440px;
+    }
 }
