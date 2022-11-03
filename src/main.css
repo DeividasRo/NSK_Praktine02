@@ -90,7 +90,7 @@ main {
 }
 
 #btn3:hover {
-    background-color: rgb(235, 61, 8);
+    background-color: rgb(236, 63, 11);
 }
 
 
@@ -150,6 +150,12 @@ input[type=button]:hover {
 
 input[type=button]:active {
     margin: 1px;
+}
+
+@media(max-width: 660px) {
+    #calculator {
+        width: 570px;
+    }
 }
 
 @media(max-width: 620px) {
