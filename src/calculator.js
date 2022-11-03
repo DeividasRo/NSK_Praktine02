@@ -1,27 +1,71 @@
 
+var input = document.getElementById('input'); // input/output button
+var firstOperand = null;
+var secondOperand = null;
+var previousOperator = null;
 
-function clearScreen() {
-    document.getElementById("result").value = "";
+function isNum(i) { return i >= '0' && i <= '9'; }
+
+function clearInput() {
+    input.value = "";
+}
+
+function resetInput() {
+    input.value = "";
+    firstOperand = null;
+    secondOperand = null;
+    previousOperator = null;
 }
 
 function clearLastElement() {
-    let val = document.getElementById("result").value;
+    let val = input.value;
     val = val.substring(0, val.length - 1);
-    document.getElementById("result").value = val;
+    input.value = val;
 }
 
-
-// This function display values
 function display(value) {
-    document.getElementById("result").value += value;
+    input.value += value;
 }
 
-// This function evaluates the expression and returns result
-function calculate() {
-    sqrt = Math.sqrt;
-    var p = document.getElementById("result").value;
-    var q = eval(p);
-    document.getElementById("result").value = q;
+
+function numFunc(value) {
+    display(value);
 }
 
-// REMAKE WITHOUT EVAL. MAKE CALCS ONE AT A TIME
+function opFunc(value) {
+    twoOperandBehaviour(value);
+}
+
+function twoOperandBehaviour(operator) {
+    if (!isNum(input.value.slice(-1)[0])) return;
+
+    firstOperand = input.value.split(previousOperator)[0];
+    secondOperand = input.value.split(previousOperator)[1];
+
+    console.log(firstOperand, secondOperand);
+
+    display(operator);
+    if (secondOperand != null) {
+        clearInput();
+        var result;
+        if (previousOperator == '+')
+            result = parseFloat(firstOperand) + parseFloat(secondOperand);
+        if (previousOperator == '-')
+            result = parseFloat(firstOperand) - parseFloat(secondOperand);
+        if (previousOperator == "*")
+            result = parseFloat(firstOperand) * parseFloat(secondOperand);
+        if (previousOperator == "/")
+            result = parseFloat(firstOperand) / parseFloat(secondOperand);
+        if (previousOperator == "%")
+            result = parseFloat(firstOperand) % parseFloat(secondOperand);
+
+        display(Number(result.toFixed(3)) + operator);
+        previousOperator = null;
+        secondOperand = null;
+    }
+
+    previousOperator = operator;
+
+
+    // change color of operator in action
+}

@@ -27,8 +27,8 @@ main {
     border-radius: 12px;
     box-shadow: 7px 7px 8px rgba(19, 25, 41, 0.35);
     margin: 15vh auto;
-    height: 440px;
-    width: 500px;
+    height: 470px;
+    width: 520px;
     padding: 15px;
 }
 
@@ -51,7 +51,7 @@ main {
     line-height: 3em;
 }
 
-#result {
+#input {
     font-size: 2.6em;
     padding: 1%;
 }
@@ -63,15 +63,15 @@ main {
     grid-template-columns: 2fr 1fr;
     column-gap: 4%;
     row-gap: 4%;
-    line-height: 4em;
+    line-height: 4.5em;
 }
 
-#btn1 {
+#result {
     background-color: #d1b40e;
     border: solid #b38900 1.2px;
 }
 
-#btn1:hover {
+#result:hover {
     background-color: #f3bb02;
 }
 
@@ -115,7 +115,7 @@ main {
 }
 
 .group2>div>input:hover {
-    background-color: #13d1f3;
+    background-color: #14cdee;
 }
 
 
@@ -135,7 +135,7 @@ input[type=button] {
     border-radius: 5px;
     height: 100%;
     outline: none;
-    font-size: 1.7em;
+    font-size: 2em;
 }
 
 .buttons input {
@@ -148,8 +148,9 @@ input[type=button]:hover {
     cursor: pointer;
 }
 
-@media(max-width: 540px) {
+@media(max-width: 550px) {
     #calculator {
         width: 440px;
+        height: 465px;
     }
 }
