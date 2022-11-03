@@ -28,22 +28,22 @@
                     <div class="number"> <input type="button" value="9" onclick="numFunc('9')" /> </div>
                     <div class="number"> <input type="button" value="." onclick="numFunc('.')" /> </div>
                     <div class="number"> <input type="button" value="0" onclick="numFunc('0')" /> </div>
-                    <div> <input type="button" value="DEL" onclick="clearLastElement()" id="btn2" /> </div>
+                    <div> <input type="button" value="DEL" onclick="clearLastInputElement()" id="btn2" /> </div>
                 </div>
                 <div class="group2">
-                    <div class="operator"> <input type="button" value="+" onclick="opFunc('+')" /> </div>
-                    <div class="operator"> <input type="button" value="-" onclick="opFunc('-')" /> </div>
-                    <div class="operator"> <input type="button" value="&times;" onclick="opFunc('*')" /></div>
-                    <div class="operator"> <input type="button" value="&divide;" onclick="opFunc('/')" /></div>
-                    <div class="operator"> <input type="button" value="√" onclick="opFunc('√')" /> </div>
-                    <div class="operator"> <input type="button" value="%" onclick="opFunc('%')" /> </div>
-                    <div class="operator"> <input type="button" value="x²" onclick="opFunc('²')" /> </div>
-                    <div class="operator"> <input type="button" value="x³" onclick="opFunc('³')" /> </div>
+                    <div class="operator"> <input type="button" value="+" onclick="opFunc2('+')" /> </div>
+                    <div class="operator"> <input type="button" value="-" onclick="opFunc2('-')" /> </div>
+                    <div class="operator"> <input type="button" value="&times;" onclick="opFunc2('*')" /></div>
+                    <div class="operator"> <input type="button" value="&divide;" onclick="opFunc2('/')" /></div>
+                    <div class="operator"> <input type="button" value="%" onclick="opFunc2('%')" /> </div>
+                    <div class="operator"> <input type="button" value="√" onclick="opFunc1('√')" /> </div>
+                    <div class="operator"> <input type="button" value="x²" onclick="opFunc1('²')" /> </div>
+                    <div class="operator"> <input type="button" value="x³" onclick="opFunc1('³')" /> </div>
                 </div>
 
             </div>
             <div class="group3">
-                <div> <input type="button" value="=" onclick="calculate()" id="result" /> </div>
+                <div> <input type="button" value="=" onclick="eqFunc()" id="result" /> </div>
             </div>
     </main>
     <script type="text/javascript" src="calculator.js"></script>

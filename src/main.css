@@ -27,8 +27,8 @@ main {
     border-radius: 12px;
     box-shadow: 7px 7px 8px rgba(19, 25, 41, 0.35);
     margin: 15vh auto;
-    height: 470px;
-    width: 520px;
+    height: 500px;
+    width: 600px;
     padding: 15px;
 }
 
@@ -53,7 +53,7 @@ main {
 
 #input {
     font-size: 2.6em;
-    padding: 1%;
+    padding: 1% 1% 0;
 }
 
 
@@ -63,16 +63,16 @@ main {
     grid-template-columns: 2fr 1fr;
     column-gap: 4%;
     row-gap: 4%;
-    line-height: 4.5em;
+    line-height: 4.8em;
 }
 
 #result {
-    background-color: #d1b40e;
+    background-color: #d8ca0c;
     border: solid #b38900 1.2px;
 }
 
 #result:hover {
-    background-color: #f3bb02;
+    background-color: #f3d31d;
 }
 
 #btn2 {
@@ -123,7 +123,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     line-height: 4em;
-    margin-top: 1.5%;
+    margin-top: 2%;
 }
 
 
@@ -148,9 +148,28 @@ input[type=button]:hover {
     cursor: pointer;
 }
 
-@media(max-width: 550px) {
+input[type=button]:active {
+    margin: 1px;
+}
+
+@media(max-width: 620px) {
+    .buttons {
+        grid-template-columns: 1fr;
+        row-gap: 2%;
+        line-height: 4em;
+    }
+
+    .group2 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2%;
+    }
+
+    .group3 {
+        margin-top: 3%;
+    }
+
     #calculator {
-        width: 440px;
-        height: 465px;
+        width: 470px;
+        height: 570px;
     }
 }
