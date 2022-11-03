@@ -18,6 +18,7 @@ function resetInput() {
 }
 
 function clearLastInputElement() {
+    if (input.value == "Infinity") clearInput();
     let val = input.value;
     val = val.substring(0, val.length - 1);
     input.value = val;
@@ -25,6 +26,11 @@ function clearLastInputElement() {
 
 function display(value) {
     input.value += value;
+}
+
+function updateOperands() {
+    firstOperand = input.value.split(previousOperator)[0];
+    secondOperand = input.value.split(previousOperator)[1];
 }
 
 
@@ -37,7 +43,7 @@ function numFunc(value) {
 function opFunc1(operator) {
     if (input.value == "Infinity") clearInput();
     updateOperands();
-    if (firstOperand == null || firstOperand == "") return;
+    if (firstOperand == null || firstOperand == "") { return; }
 
     calculate();
     if (!isNum(input.value.slice(-1)[0])) { clearLastInputElement(); }
@@ -53,6 +59,9 @@ function opFunc1(operator) {
     else if (operator == '³') {
         result = Math.pow(parseFloat(firstOperand), 3);
     }
+    else if (operator == 's') {
+        result = -parseFloat(firstOperand);
+    }
 
     clearInput();
     display(Number(result.toFixed(3)));
@@ -62,7 +71,7 @@ function opFunc1(operator) {
 function opFunc2(operator) {
     if (input.value == "Infinity") clearInput();
     updateOperands();
-    if (firstOperand == null || firstOperand == "") return;
+    if (firstOperand == null || firstOperand == "") { return; }
 
     if (!isNum(input.value.slice(-1)[0])) {
         clearLastInputElement();
@@ -89,11 +98,6 @@ function eqFunc() {
     calculate();
 }
 
-function updateOperands() {
-    firstOperand = input.value.split(previousOperator)[0];
-    secondOperand = input.value.split(previousOperator)[1];
-}
-
 function calculate() {
     console.log(firstOperand, secondOperand, previousOperator);
     if (secondOperand != null && secondOperand != "") {
@@ -101,7 +105,7 @@ function calculate() {
         var result;
         if (previousOperator == '+')
             result = parseFloat(firstOperand) + parseFloat(secondOperand);
-        else if (previousOperator == '-')
+        else if (previousOperator == '–')
             result = parseFloat(firstOperand) - parseFloat(secondOperand);
         else if (previousOperator == "*")
             result = parseFloat(firstOperand) * parseFloat(secondOperand);
