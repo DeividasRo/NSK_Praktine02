@@ -27,7 +27,7 @@ main {
     border-radius: 12px;
     box-shadow: 7px 7px 8px rgba(19, 25, 41, 0.35);
     margin: 15vh auto;
-    height: 520px;
+    height: 515px;
     width: 700px;
     padding: 15px;
 }
@@ -53,22 +53,12 @@ main {
 
 #input {
     font-size: 2.6em;
-    padding: 1% 1% 0;
-}
-
-
-.buttons {
-    margin-top: 4%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 4%;
-    row-gap: 4%;
-    line-height: 5em;
+    padding: 0 0 0 1%;
 }
 
 #result {
     background-color: #d8ca0c;
-    border: solid #b38900 1.2px;
+    border: solid #b38900 1px;
 }
 
 #result:hover {
@@ -77,7 +67,7 @@ main {
 
 #btn2 {
     background-color: #da790b;
-    border: solid #b38900 1.2px;
+    border: solid #a78000 1px;
 }
 
 #btn2:hover {
@@ -86,7 +76,7 @@ main {
 
 #btn3 {
     background-color: rgb(204, 56, 11);
-    border: solid rgb(163, 43, 6) 1.2px;
+    border: solid rgb(163, 43, 6) 1px;
 }
 
 #btn3:hover {
@@ -112,6 +102,7 @@ main {
 
 .group2>div>input {
     background-color: #1cadda;
+    border: solid #118aaf 1px;
 }
 
 .group2>div>input:hover {
@@ -125,6 +116,17 @@ main {
     line-height: 4em;
     margin-top: 2%;
 }
+
+
+.buttons {
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4%;
+    row-gap: 4%;
+    line-height: 5em;
+}
+
 
 .invis {
     visibility: hidden;
@@ -144,9 +146,8 @@ input[type=button] {
 
 .buttons input {
     height: 90%;
-    border: solid #00421e 1.2px;
+    border: solid #00421e 1px;
 }
-
 
 input[type=button]:hover {
     cursor: pointer;
@@ -159,7 +160,7 @@ input[type=button]:active {
 @media(max-width: 740px) {
     #calculator {
         width: 570px;
-        height: 510px;
+        height: 505px;
     }
 }
 
@@ -176,7 +177,7 @@ input[type=button]:active {
     }
 
     .group3 {
-        margin-top: 3%;
+        margin-top: 4%;
     }
 
     .invis {
